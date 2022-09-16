@@ -1,127 +1,23 @@
 {
   "name": "discord.js-hakai",
-  "version": "11.6.4",
-  "description": "A powerful library for interacting with the Discord API",
-  "main": "./src/index",
-  "types": "./typings/index.d.ts",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">   <br />   <p>     <a href=\"https://discord.js-hakai.org\"><img src=\"https://discord.js-hakai.org/static/logo.svg\" width=\"546\" alt=\"discord.js-hakai\" /></a>   </p>   <br />   <p>     <a href=\"https://discord.gg/bRCvFy9\"><img src=\"https://discordapp.com/api/guilds/222078108977594368/embed.png\" alt=\"Discord server\" /></a>     <a href=\"https://www.npmjs.com/package/discord.js-hakai\"><img src=\"https://img.shields.io/npm/v/discord.js-hakai.svg?maxAge=3600\" alt=\"NPM version\" /></a>     <a href=\"https://www.npmjs.com/package/discord.js-hakai\"><img src=\"https://img.shields.io/npm/dt/discord.js-hakai.svg?maxAge=3600\" alt=\"NPM downloads\" /></a>     <a href=\"https://travis-ci.org/discordjs/discord.js-hakai\"><img src=\"https://travis-ci.org/discordjs/discord.js-hakai.svg\" alt=\"Build status\" /></a>     <a href=\"https://david-dm.org/discordjs/discord.js-hakai\"><img src=\"https://img.shields.io/david/discordjs/discord.js-hakai.svg?maxAge=3600\" alt=\"Dependencies\" /></a>   </p>   <p>     <a href=\"https://nodei.co/npm/discord.js-hakai/\"><img src=\"https://nodei.co/npm/discord.js-hakai.png?downloads=true&stars=true\" alt=\"NPM info\" /></a>   </p> </div>",
+  "main": "browser.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
   "scripts": {
-    "test": "npm run lint && npm run docs:test",
-    "docs": "docgen --source src --custom docs/index.yml --output docs/docs.json",
-    "docs:test": "docgen --source src --custom docs/index.yml",
-    "lint": "eslint src",
-    "lint:fix": "eslint --fix src",
-    "lint:typings": "tslint typings/index.d.ts typings/discord.js-hakai-test.ts",
-    "webpack": "parallel-webpack"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/discordjs/discord.js-hakai.git"
+    "url": "git+https://github.com/lukyy8/discord.js-hakai.git"
   },
-  "keywords": [
-    "discord",
-    "api",
-    "bot",
-    "client",
-    "node",
-    "discordapp"
-  ],
-  "author": "Amish Shah <amishshah.2k@gmail.com>",
-  "license": "Apache-2.0",
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/discordjs/discord.js-hakai/issues"
+    "url": "https://github.com/lukyy8/discord.js-hakai/issues"
   },
-  "homepage": "https://github.com/discordjs/discord.js-hakai#readme",
-  "runkitExampleFilename": "./docs/examples/ping.js",
-  "dependencies": {
-    "long": "^4.0.0",
-    "prism-media": "^0.0.4",
-    "snekfetch": "^3.6.4",
-    "tweetnacl": "^1.0.0",
-    "ws": "^6.0.0"
-  },
-  "peerDependencies": {
-    "@discordjs/uws": "^10.149.0",
-    "bufferutil": "^4.0.0",
-    "erlpack": "discordapp/erlpack",
-    "libsodium-wrappers": "^0.7.3",
-    "@discordjs/opus": "^0.1.0",
-    "node-opus": "^0.2.7",
-    "opusscript": "^0.0.6",
-    "sodium": "^2.0.3"
-  },
-  "peerDependenciesMeta": {
-    "bufferutil": {
-      "optional": true
-    },
-    "erlpack": {
-      "optional": true
-    },
-    "@discordjs/opus": {
-      "optional": true
-    },
-    "node-opus": {
-      "optional": true
-    },
-    "opusscript": {
-      "optional": true
-    },
-    "sodium": {
-      "optional": true
-    },
-    "libsodium-wrappers": {
-      "optional": true
-    },
-    "uws": {
-      "optional": true
-    }
-  },
-  "devDependencies": {
-    "@types/node": "^9.4.6",
-    "discord.js-hakai-docgen": "discordjs/docgen",
-    "eslint": "^5.4.0",
-    "parallel-webpack": "^2.3.0",
-    "tslint": "^3.15.1",
-    "tslint-config-typings": "^0.2.4",
-    "typescript": "^3.0.1",
-    "uglifyjs-webpack-plugin": "^1.3.0",
-    "webpack": "^4.17.0"
-  },
-  "engines": {
-    "node": ">=6.0.0"
-  },
-  "browser": {
-    "ws": false,
-    "uws": false,
-    "@discordjs/uws": false,
-    "erlpack": false,
-    "prism-media": false,
-    "opusscript": false,
-    "node-opus": false,
-    "@discordjs/opus": false,
-    "tweetnacl": false,
-    "sodium": false,
-    "src/sharding/Shard.js": false,
-    "src/sharding/ShardClientUtil.js": false,
-    "src/sharding/ShardingManager.js": false,
-    "src/client/voice/dispatcher/StreamDispatcher.js": false,
-    "src/client/voice/opus/BaseOpusEngine.js": false,
-    "src/client/voice/opus/NodeOpusEngine.js": false,
-    "src/client/voice/opus/DiscordJsOpusEngine.js": false,
-    "src/client/voice/opus/OpusEngineList.js": false,
-    "src/client/voice/opus/OpusScriptEngine.js": false,
-    "src/client/voice/pcm/ConverterEngine.js": false,
-    "src/client/voice/pcm/ConverterEngineList.js": false,
-    "src/client/voice/pcm/FfmpegConverterEngine.js": false,
-    "src/client/voice/player/AudioPlayer.js": false,
-    "src/client/voice/receiver/VoiceReadable.js": false,
-    "src/client/voice/receiver/VoiceReceiver.js": false,
-    "src/client/voice/util/Secretbox.js": false,
-    "src/client/voice/util/SecretKey.js": false,
-    "src/client/voice/util/VolumeInterface.js": false,
-    "src/client/voice/ClientVoiceManager.js": false,
-    "src/client/voice/VoiceBroadcast.js": false,
-    "src/client/voice/VoiceConnection.js": false,
-    "src/client/voice/VoiceUDPClient.js": false,
-    "src/client/voice/VoiceWebSocket.js": false
-  }
+  "homepage": "https://github.com/lukyy8/discord.js-hakai#readme"
 }
